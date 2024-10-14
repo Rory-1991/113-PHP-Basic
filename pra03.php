@@ -95,7 +95,7 @@ for ($i=4; $i>=0; $i--) {
 
 ?>
 <hr>
-<h3>菱形</h3>
+<h3>菱形(作法一)</h3>
 
 <?php
 
@@ -126,6 +126,94 @@ for ($i=0; $i<9; $i++) {
 }
 
 ?>
+<hr>
+<h3>菱形(精簡)</h3>
+
+<?php 
+for($i=0;$i<21;$i++){
+    if($i>10){
+        $k1=$i-10;
+        $j1=2*($i-(2*($i-10)))+1;
+    }else{
+        $k1=10-$i;
+        $j1=(2*$i+1);
+    }
+
+    for($k=0;$k<$k1;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$j1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+    
+}
+?>
+<hr>
+<h3>矩形</h3>
+
+<?php
+for($i=0;$i<5;$i++){
+    for($j=0;$j<5;$j++){
+        if($i==0 || $i==4){
+            echo "*";
+        }else if($j==0 || $j==4){
+            echo "*";
+        }else{
+            echo "&nbsp";
+        }
+    }
+    echo "<br>";
+}
+
+?>
+
+<hr>
+<h3>對角線矩形-奇數</h3>
+
+<?php
+for($i=0;$i<7;$i++){
+    for($j=0;$j<7;$j++){
+        if($i==0 || $i==6){
+            echo "*";
+        }else if($j==0 || $j==6){
+            echo "*";
+        }else if($i==$j || $j+$i==6){
+            echo "*";
+        
+        }else{
+            echo "&nbsp";
+        }
+    }
+    echo "<br>";
+}
+
+
+?>
+
+<h3>對角線矩形-偶數</h3>
+
+<?php
+for($i=0;$i<6;$i++){
+    for($j=0;$j<6;$j++){
+        if($i==0 || $i==5){
+            echo "*";
+        }else if($j==0 || $j==5){
+            echo "*";
+        }else if($i==$j || $j+$i==5){
+            echo "*";
+        
+        }else{
+            echo "&nbsp";
+        }
+    }
+    echo "<br>";
+}
+
+
+?>
+
 
 </body>
 </html>
