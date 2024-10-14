@@ -150,10 +150,12 @@ for($i=0;$i<21;$i++){
     
 }
 ?>
+
 <hr>
 <h3>矩形</h3>
 
 <?php
+
 for($i=0;$i<5;$i++){
     for($j=0;$j<5;$j++){
         if($i==0 || $i==4){
@@ -168,18 +170,43 @@ for($i=0;$i<5;$i++){
 }
 
 ?>
+<hr>
+<h3>矩形(變數控制)</h3>
+
+<?php
+$height=8;
+$width=7;
+
+for($i=0;$i<$height;$i++){
+    for($j=0;$j<$width;$j++){
+        if($i==0 || $i==$height-1){
+            echo "*";
+        }else if($j==0 || $j==$width-1){
+            echo "*";
+        }else{
+            echo "&nbsp";
+        }
+    }
+    echo "<br>";
+}
+
+?>
 
 <hr>
 <h3>對角線矩形-奇數</h3>
 
 <?php
-for($i=0;$i<7;$i++){
-    for($j=0;$j<7;$j++){
-        if($i==0 || $i==6){
+
+$height=7;
+$width=7;
+
+for($i=0;$i<$height;$i++){
+    for($j=0;$j<$width;$j++){
+        if($i==0 || $i==$height-1){
             echo "*";
-        }else if($j==0 || $j==6){
+        }else if($j==0 || $j==$width-1){
             echo "*";
-        }else if($i==$j || $j+$i==6){
+        }else if($i==$j || $j+$i==$width-1){
             echo "*";
         
         }else{
@@ -195,13 +222,17 @@ for($i=0;$i<7;$i++){
 <h3>對角線矩形-偶數</h3>
 
 <?php
-for($i=0;$i<6;$i++){
-    for($j=0;$j<6;$j++){
-        if($i==0 || $i==5){
+
+$height=6;
+$width=6;
+
+for($i=0;$i<$height;$i++){
+    for($j=0;$j<$width;$j++){
+        if($i==0 || $i==$height-1){
             echo "*";
-        }else if($j==0 || $j==5){
+        }else if($j==0 || $j==$width-1){
             echo "*";
-        }else if($i==$j || $j+$i==5){
+        }else if($i==$j || $j+$i==$width-1){
             echo "*";
         
         }else{
