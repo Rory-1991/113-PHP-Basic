@@ -215,4 +215,36 @@ for($j=0; $j<=9 ; $j++){
 echo "</table>";
 
 ?>
+<h3>半邊99乘法表</h3>
+<?php
+//只印下半部
+echo "<table class='nine'>";
+for($j=0; $j<=9 ; $j++){
+    echo "<tr>";
+    for ($i=0;$i<=9;$i++){
+        echo "<td>"; 
+        if($j==0 && $i==0){
+            echo "";
+        }else if($j==0){
+            echo $i;
+        }else if($i==0){
+            echo $j;
+        }else{
+            //只印下半部的條件
+            if($i>=$j){
+            //$i<=$j 上下切換
+            echo ($j*$i);
+            }
+            
+        }
+
+        echo "</td>";
+    }     
+        echo "</tr>"; 
+        
+}
+echo "</table>";
+
+
+?>
 
