@@ -41,9 +41,70 @@ foreach($nums as $num){
 echo "<hr>";
 echo join(", ",$nums) ;
 
+?>
+<h2>已知西元1024年為甲子年，請設計一支程式，可以接受任一西元年份，輸出對應的天干地支的年別。(利用迴圈)</h2>
+<ul>
+    <li>天干：甲乙丙丁戊己庚辛壬癸</li>
+    <li>地支：子丑寅卯辰巳午未申酉戌亥</li>
+    <li>天干地支配對：甲子、乙丑、丙寅….甲戌、乙亥、丙子….</li>
+    </ul>
+
+<?php
+
+$sky=[ '甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+$land=[ '子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+
+$sl=[];
+
+for($i=0;$i<6;$i++){
+
+    for($j=0;$j<10;$j++){
+        $cellnum=10*$i+$j;
+        $landIndex=$cellnum%12;
+        $sl[]=$sky[$j].$land[$landIndex];
+    }
+}
+$year=2034;
+
+echo $sl[($year-4)%60];
+
+//echo "<pre>";
+//print_r($sl);
+//echo "</pre>";
+
 
 
 ?>
+<h2>請設計一支程式，在不產生新陣列的狀況下，將一個陣列的元素順序反轉(利用迴圈)</h2>
+
+<ul>
+    <li>例：$a=[2,4,6,1,8] 反轉後 $a=[8,1,6,4,2]</li>
+</ul>
+<?php
+
+$a=[2,4,6,1,8,5];
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+for($i=0;$i<floor(count($a)/2);$i++){
+    $tmp=$a[$i];
+    $a[$i]=$a[count($a)-1-$i];
+    $a[count($a)-1-$i]=$tmp;
+    }
+echo "<br>";
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+echo "<hr>";
+echo "<pre>";
+print_r(array_reverse($a));
+echo "</pre>";
+
+
+
+?>
+
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
