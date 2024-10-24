@@ -103,7 +103,6 @@ print_r(array_reverse($a));
 echo "</pre>";
 
 
-
 ?>
 
 
