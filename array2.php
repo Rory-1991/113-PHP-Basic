@@ -91,6 +91,7 @@ for($i=0;$i<floor(count($a)/2);$i++){
     $a[$i]=$a[count($a)-1-$i];
     $a[count($a)-1-$i]=$tmp;
     }
+    // 第一次反轉
 echo "<br>";
 echo "<pre>";
 print_r($a);
@@ -98,6 +99,7 @@ echo "</pre>";
 echo "<hr>";
 echo "<pre>";
 print_r(array_reverse($a));
+// 再度反轉回來
 echo "</pre>";
 
 
